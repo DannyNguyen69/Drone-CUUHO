@@ -1,0 +1,28 @@
+#map {
+  height: 100vh;
+  width: 100vw;
+}
+/* Giữ cho control không bị tràn màn hình */
+.leaflet-control-container {
+  max-width: 100vw;
+}
+
+/* Dịch nhẹ control sang trong một chút để tránh bị mất góc */
+.leaflet-top.leaflet-right {
+  right: 10px;
+  top: 10px;
+}
+
+/* Responsive: trên điện thoại thì dời control xuống dưới */
+@media (max-width: 600px) {
+  .leaflet-top.leaflet-right {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .leaflet-control-layers {
+    font-size: 12px;
+    padding: 4px;
+  }
+}
